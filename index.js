@@ -7,6 +7,7 @@ const cors = require('cors')
 app.use(cors())
 app.use(express.json())
 const CollgModel = require('./models/Colleges')
+const StudentModel = require('./models/students')
 const mongoose = require('mongoose')
 require('dotenv').config();
 
@@ -39,7 +40,7 @@ app.post('/addCollege', async (req, res) => {
 });
 
 
-app.get("/read", async (req, res) => {
+app.get("/readCollege", async (req, res) => {
     CollgModel.find({}, (err, result) => {
       if (err) {
         res.send(err);
@@ -48,6 +49,17 @@ app.get("/read", async (req, res) => {
       }
     });
   });
+
+app.get("/readStudent", async (req, res) => {
+  StudentModel.find({}, (err, result) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
 
 
 app.listen(process.env.PORT || 3001, () => {
