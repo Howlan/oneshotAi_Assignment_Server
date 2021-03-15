@@ -10,7 +10,7 @@ const CollgModel = require('./models/Colleges')
 const mongoose = require('mongoose')
 require('dotenv').config();
 
-mongoose.connect('mongodb+srv://rick:Rick@1999@oneshot-ai-backend.m3iuo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://rick:Rick@1999@oneshot-ai-backend.m3iuo.mongodb.net/oneshotAi?retryWrites=true&w=majority',
                 {useNewUrlParser : true}
 );
 
