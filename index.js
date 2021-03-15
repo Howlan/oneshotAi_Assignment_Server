@@ -50,6 +50,6 @@ app.get("/read", async (req, res) => {
   });
 
 
-app.listen(process.env.PORT | 3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log("Connected!")
 })
