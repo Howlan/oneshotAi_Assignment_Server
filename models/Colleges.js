@@ -35,6 +35,6 @@ const oneshotAi = new mongoose.Schema({
     }
 });
 
-const CollgModel = mongoose.model('Colleges', oneshotAi);
+const CollgModel = mongoose.model('colleges', oneshotAi);
 
 module.exports = CollgModel ;
