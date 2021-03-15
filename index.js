@@ -40,7 +40,6 @@ app.post('/addCollege', async (req, res) => {
 
 
 app.get("/read", async (req, res) => {
-  res.send(CollgModel)
     CollgModel.find({}, (err, result) => {
       if (err) {
         res.send(err);
